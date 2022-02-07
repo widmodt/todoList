@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo_container">
+        <div class="header_container">
+            <input type="text" class="todo_input"> 
+            <input id="date" type="date" value="2022-02-01">
+            <select name="todo_type" id="type">
+                <option value="usual">usual</option>
+                <option value="important">important</option>
+            </select>
+            <button class="todo_add">Add</button>
+            <button class="todo_save">Save</button>
+            <button class="todo_load">Load</button>
+        </div>
+        <div class="todo_list">
+            <div class="todo_item">
+                <div class="todo_item_text">Example</div>
+                <div class="todo_item_date">2022-02-01</div>
+                <div class="todo_item_delete">&#128465;</div>
+            </div>
+            <div class="todo_item">
+                <div class="todo_item_text">Example</div>
+                <div class="todo_item_date">2022-02-02</div>
+                <div class="todo_item_delete">&#128465;</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

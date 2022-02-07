@@ -1,0 +1,29 @@
+.todo_container {
+    width: 600px;
+    margin:50px auto 0 auto;
+}
+
+.todo_list {
+    border: 1px solid grey;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+.todo_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo_item_date {
+    display: block;
+    margin-left: auto;
+}
+.important {
+    background-color: rgba(138, 17, 23, 0.911);
+    color: aliceblue;
+}
+
+.usual {
+    background-color:aquamarine;
+}
