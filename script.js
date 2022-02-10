@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const btnSave = document.querySelector('.todo_save');
     const btnLoad = document.querySelector('.todo_load');
     const input = document.querySelector('.todo_input');
-    const list = document.querySelector('.todo_list');
+    const list = document.querySelector('.todo-list');
     const type = document.querySelector('#type');
     const dateInput = document.querySelector('#date');
 
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function sortItems() {
 
-        const nodeList = document.querySelectorAll('.todo_item');
+        const nodeList = document.querySelectorAll('.todo-list__item');
         let listItems = Array.from(nodeList);
 
         listItems.sort((a, b) => {
@@ -38,16 +38,16 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function addItem(text = input.value, priority = type.value, date = dateInput) {
+    function addItem(text = input.value, priority = type.value, date = dateInput.value) {
 
         const item = document.createElement('div');
 
         item.innerHTML = `
             <div class="todo_item_text">${text}</div>
             <div class="todo_item_date">${date}</div>
-            <div class="todo_item_delete">&#128465;</div>
+            <div class="todo_item_delete"><img src="cross.svg" alt="delte"></div>
         `;
-        item.classList.add(`${priority}`, `todo_item`);
+        item.classList.add(`${priority}`, `todo-list__item`);
         list.append(item);
         initDelete();
     }

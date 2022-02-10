@@ -1,29 +1,99 @@
+:root {
+    --box-shadow: 5px 5px 8px #c3c3c3,
+                 -5px -5px 8px #fdfdfd;
+}
+body {
+    font-family: roboto;
+    background-color: #e0e0e0;
+}
 .todo_container {
     width: 600px;
-    margin:50px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
-
-.todo_list {
-    border: 1px solid grey;
+.todo_input {
+    box-sizing: border-box;
+    width: 600px;
+    margin: 0;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: var(--box-shadow);
+}
+#date {
+    margin-right: 10px;
+    padding: 6px;
+    border: none;
+    border-radius: 7px;
+    box-shadow:  var(--box-shadow);
+}
+#type {
+    padding: 8px;
+    border: none;
+    border-radius: 7px;
+    box-shadow:  var(--box-shadow);
+}
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-container button {
+    margin-left: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 7px;
+    box-shadow:  var(--box-shadow);
+}
+.todo_add {
+    margin-left: auto !important;
+}
+.todo-list {
+    border-radius: 7px;
+    background: #e0e0e0;
+    box-shadow:  var(--box-shadow);
     margin-top: 10px;
     padding: 10px;
-    border-radius: 4px;
 }
-.todo_item {
+
+.todo-list__item {
+    box-sizing: border-box;
+    padding: 6px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+.todo-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.todo_item_text {
+    max-width: 75%;
+    display: block;
 }
 
 .todo_item_date {
+    max-width: 90px;
     display: block;
     margin-left: auto;
 }
+
+.todo_item_delete {
+    display: flex;
+    margin-left: 10px;
+}
+.todo_item_delete img {
+    width: 16px;
+}
+
 .important {
-    background-color: rgba(138, 17, 23, 0.911);
-    color: aliceblue;
+    background-color: #FFE53B;
+    background-image: linear-gradient(19deg, #FFE53B 0%, #FF2525 74%);
+
 }
 
 .usual {
-    background-color:aquamarine;
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 }
